@@ -149,6 +149,11 @@ Merb::Config.use do |c|
   c[:session_store] = 'cookie'
 end
 
+Merb::BootLoader.after_app_loads do
+     require Merb.root / 'lib/attachmerb_fu/datamapper_bindings' 
+end
+
+
 
 # ==== Tune your inflector
 
