@@ -1,0 +1,3 @@
+[submodule "lib/attachmerb_fu"]
+	path = lib/attachmerb_fu
+	url = git@github.com:hosh/attachmerb_fu.git
