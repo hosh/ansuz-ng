@@ -1,0 +1,37 @@
+---
+# This is a sample database file for the DataMapper ORM
+development: &defaults
+  # These are the settings for repository :default
+  adapter:  couchdb
+  database: ansuz_ng_dev
+  username: 
+  password: 
+  host:     localhost
+  port: 5984
+
+  # Add more repositories
+  # repositories:
+  #   repo1:
+  #     adapter:  postgresql
+  #     database: sample_development
+  #     username: the_user
+  #     password: secrets
+  #     host:     localhost
+  #   repo2:
+  #     ...
+
+test:
+  <<:       *defaults
+  database: ansuz_ng_test
+
+  # repositories:
+  #   repo1:
+  #     database: sample_development
+
+production:
+  <<:       *defaults
+  database: sample_production
+
+  # repositories:
+  #   repo1:
+  #     database: sample_development
